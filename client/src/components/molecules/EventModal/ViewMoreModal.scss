@@ -1,0 +1,70 @@
+.viewmore-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  .viewmore-modal {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+
+    .modal-header {
+      display: flex;
+      justify-content: flex-end;
+
+      .close-button {
+      
+        background: none;
+        border: none;
+        font-size: 1.5em;
+      }
+    }
+
+    .view-event-details {
+      margin: 10px 0;
+
+      .info {
+        margin-bottom: 10px;
+        margin-left: 10px;
+
+        h2 {
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-left: 5px;
+        }
+      }
+
+      .submit-button,
+      .cancel-button {
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .cancel-button {
+        background-color: #c80380;
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .viewmore-modal-overlay {
+      padding: 20px; 
+      .viewmore-modal {
+        top: 0;
+      }
+    }
+  }
+}

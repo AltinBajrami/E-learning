@@ -1,0 +1,43 @@
+@import '../../../../styles/variables.scss';
+
+.editStudents {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  h2 {
+    letter-spacing: 2px;
+  }
+}
+
+.students {
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  display: flex;
+  flex-wrap: wrap;
+}
+.student {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  p {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+  }
+  button {
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: $primary-color;
+    border: none;
+    cursor: pointer;
+  }
+  .removeBtn {
+    color: red;
+  }
+}

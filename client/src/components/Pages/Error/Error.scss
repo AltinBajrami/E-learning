@@ -1,0 +1,36 @@
+.error {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 468px;
+
+  img {
+    width: 90vw;
+    max-width: 600px;
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: -3rem;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    text-align: center;
+    line-height: 2;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    background: #1a73e8;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+}

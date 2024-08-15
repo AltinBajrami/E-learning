@@ -1,0 +1,68 @@
+/* src/CreateQuiz.css */
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: black;
+  h2 {
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    label {
+      text-transform: capitalize;
+      text-align: start;
+    }
+    input,
+    select,
+    textarea {
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid black;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+    }
+  }
+  .single-question-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .single-question {
+      background-color: rgb(239, 239, 239);
+      padding: 10px;
+      border-radius: 8px;
+      .single-question-text {
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 0.5rem;
+        border: 1px solid black;
+        text-transform: capitalize;
+      }
+      .option {
+        display: flex;
+        gap: 0.5rem;
+        input {
+          padding: 5px 10px;
+          margin-bottom: 0.2rem;
+          border-radius: 3px;
+          border: none;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

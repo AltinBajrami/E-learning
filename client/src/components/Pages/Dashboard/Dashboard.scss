@@ -1,0 +1,445 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins.scss';
+
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+
+.search-results {
+  position: absolute;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  width: 240px;
+  z-index: 10;
+  overflow-y: auto;
+  top: 88px;
+  left: 50;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 7px;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background: #f0f0f0;
+}
+
+.search-results div {
+  padding: 7px;
+}
+
+.search-icon {
+  position: absolute;
+  transform: translateY(-0%);
+  margin-left: 5px;
+  width: 26px;
+  height: 26px;
+}
+
+.x-delete {
+  position: absolute;
+  transform: translateY(-0%);
+  margin-left: 215px;
+  width: 13px;
+  height: 13px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 90%;
+  background-color: $header-bg-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.header input {
+  padding-right: 40px;
+}
+
+.search-bar {
+  padding: 10px 0px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 162px;
+}
+
+.date-picker {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-chevron {
+  font-size: 12px;
+  padding-left: 5px;
+  font-weight: 100;
+}
+
+.view-toggle {
+  margin-right: -400px;
+}
+
+.view-toggle button {
+  padding: 10px 20px;
+  border: none;
+  background-color: $sidebar-item-color;
+  color: $background-color;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.view-toggle button:hover,
+.view-toggle button.active {
+  background-color: $sidebar-active-color;
+  color: $background-color;
+  cursor: pointer;
+}
+
+.toggleMenu svg {
+  color: #333;
+  font-size: 2rem;
+  background-color: transparent;
+  border: transparent;
+}
+@media (min-width: 800px) {
+  .toggleMenu svg {
+    display: none;
+  }
+}
+
+.tasks-section {
+  padding: 20px;
+  background-color: $sidebar-bg-color;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.tasks-section h2 {
+  text-align: left;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+.tasks-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+
+  .summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 20px;
+    text-align: center;
+    align-items: center;
+
+    span {
+      display: block;
+      font-size: 64px;
+      font-weight: bold;
+      color: #333;
+      margin-right: 100px;
+
+      &:last-child {
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        color: #666;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-right: 95px;
+      }
+    }
+
+    &:first-child {
+      flex: 1 1 70%;
+      flex-direction: row;
+      justify-content: space-between;
+
+      span:first-child {
+        font-size: 24px;
+      }
+    }
+
+    &:nth-child(2) {
+      align-items: end;
+      margin-left: 835px;
+      margin-right: 20px;
+      text-align: center;
+      align-items: center;
+    }
+  }
+}
+
+hr {
+  margin-left: -55px;
+  margin-bottom: 20px;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.arrow {
+  width: 16px;
+  margin: 0;
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.status.done {
+  color: $task-status-done;
+}
+
+.status.in-progress {
+  color: $task-status-in-progress;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: auto;
+  height: 420px;
+}
+
+.productivity-section,
+.projects-section {
+  padding: 20px;
+  background-color: $header-bg-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+  margin-right: 20px;
+}
+
+.productivity-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-section {
+  display: block;
+  background-color: $sidebar-active-color;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: calc(50% - 10px);
+  margin-right: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  h2 {
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+}
+
+.project-card {
+  background-color: $header-bg-color;
+  color: $text-color;
+  padding: 13px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  p {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.toggle-btn {
+  width: 35px;
+  position: absolute;
+  right: 35px;
+  top: 70px;
+  display: block;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  float: left;
+  margin-bottom: 8px;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.toggle-btn {
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  .view-toggle button {
+    display: block;
+    margin-bottom: 5px;
+    width: 68px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .productivity-section {
+    width: 200px;
+  }
+
+  .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tasks-table {
+    width: 400px;
+  }
+
+  .tasks-table th:nth-child(5),
+  .tasks-table td:nth-child(5),
+  .tasks-table th:nth-child(6),
+  .tasks-table td:nth-child(6) {
+    display: none;
+  }
+
+  .tasks-summary {
+    width: 300px;
+  }
+
+  .summary-items {
+    width: 300px;
+  }
+
+  .date-picker {
+    display: none;
+  }
+
+  .search-bar {
+    width: 150px;
+  }
+
+  .view-toggle {
+    display: none;
+  }
+
+  .sd {
+    display: none;
+  }
+
+  .tasks-summary .summary-item {
+    display: none;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .toggle-btn {
+    margin-right: -60px;
+    margin-top: 20px;
+  }
+  .search-results {
+    width: 190px;
+  }
+  .header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Toggle
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: '';
+  }
+  &:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: blue;
+    &:before {
+      left: 30px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}

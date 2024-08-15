@@ -1,0 +1,197 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.community-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes at least the viewport height */
+}
+
+.community-header {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.community-header p {
+  align-items: center;
+  text-align: center;
+}
+
+.community-modules {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Example gap between modules */
+  margin-bottom: 50px; /* Add space below the modules */
+}
+
+/* Module item styles (assuming Section component styling) */
+.community-modules .section {
+  max-width: 500px; /* Example max-width for each module */
+  width: 100%;
+}
+
+.community-engagement {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; /* Add space below the engagement section */
+}
+
+.community-engagement h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.community-engagement ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.community-engagement li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.community-spotlights {
+  /* Styles for the member spotlights section */
+  text-align: center;
+  margin-bottom: 50px; /* Add space below the spotlights section */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  flex-direction: column; /* Stack spotlights and forum vertically */
+  align-items: center; /* Center items vertically */
+}
+
+.community-spotlights h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.community-spotlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.community-spotlight {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.community-spotlight h3 {
+  padding: 10px;
+}
+
+.community-spotlight h5 {
+  padding: 10px;
+}
+
+.community-spotlight img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.community-forum {
+  /* Styles for the discussion forum section */
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; /* Add space below the forum section */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.community-forum .forum-content {
+  display: flex; /* Flex container for text and button */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.community-forum h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.community-forum p {
+  margin-bottom: 20px;
+}
+
+.community-forum button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.community-forum button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .community-header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .community-modules {
+    flex-direction: column;
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .community-modules .section {
+    max-width: 100%;
+  }
+
+  .community-spotlights-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+
+  .community-spotlight {
+    padding: 15px;
+  }
+
+  .community-spotlight img {
+    width: 100%; /* Ensure images fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .community-forum .forum-content {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 510px) {
+  .community-header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .community-spotlights {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .community-spotlights h2, .community-forum h2 {
+    font-size: 20px;
+  }
+
+  .community-spotlight img {
+    width: 100%; /* Ensure images fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .community-forum button {
+    padding: 8px 16px;
+  }
+}

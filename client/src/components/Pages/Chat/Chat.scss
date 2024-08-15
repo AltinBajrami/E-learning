@@ -1,0 +1,136 @@
+.messenger {
+  display: flex;
+  margin: 0 auto;
+}
+
+.chatMenu {
+  flex: 2;
+  max-height: calc(100vh - 13rem);
+}
+.chatMenuInput {
+  width: 95%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid green;
+}
+.chatBox {
+  flex: 3;
+  max-height: calc(100vh - 13rem);
+}
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chatBoxTop {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(182, 182, 182) rgb(229, 229, 229);
+}
+
+.chatBoxBottom {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  .fileInput {
+    display: none;
+  }
+  .fileInputButton {
+    border: transparent;
+    background-color: transparent;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+.chatMessageInput {
+  width: 80%;
+  // height: 90px;
+  padding: 10px;
+}
+
+.chatMenuWrapper,
+.chatBoxWrapper {
+  padding: 10px;
+  height: 100%;
+}
+.chatMenuWrapper {
+  .searchBtn {
+    input {
+      padding-left: 1rem;
+    }
+  }
+}
+.searchBtn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.noConversationText {
+  position: absolute;
+  top: 10%;
+  font-size: 1.8rem;
+  color: var(--grey-500);
+  cursor: default;
+}
+
+.searchResults {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.selected {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.searchResultItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.searchResultItem:hover {
+  background: #f0f0f0;
+}
+.createConversationButton {
+  color: red;
+  background-color: green;
+  position: absolute;
+  /* top: 220px; */
+}
+.chatMenuWrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(182, 182, 182) rgb(229, 229, 229);
+}
+@media (max-width: 500px) {
+  .messenger {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .chatMenu {
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    .chatMenuWrapper {
+      max-height: 400px;
+    }
+  }
+  .chatBox {
+    max-height: 400px;
+    .chatBoxTop {
+      max-height: 400px;
+    }
+  }
+}

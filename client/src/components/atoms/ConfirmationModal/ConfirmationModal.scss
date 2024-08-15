@@ -1,0 +1,53 @@
+.confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    margin-top: 10px;
+  }
+  
+  .button-container button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button-container button.yes-button {
+    background-color: #ff4d4f; /* Red background color for the Yes button */
+    color: white; /* Text color for the Yes button */
+  }
+  
+  .button-container button.yes-button:hover {
+    background-color: darkred; /* Darker red color on hover */
+  }
+  
+  .button-container button.no-button {
+    background-color: #007bff; /* Blue background color for the No button */
+    color: white; /* Text color for the No button */
+  }
+  
+  .button-container button.no-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }

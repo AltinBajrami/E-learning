@@ -1,0 +1,70 @@
+.icon-edit {
+  background: #0056b3;
+}
+
+.icon-delete {
+  background: #c82333;
+}
+
+.quizzes-list {
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .icon-edit {
+      background: #007bff;
+      color: white;
+    }
+    
+    .icon-delete {
+      background: #ff4d4f;
+      color: white;
+    }
+
+    .quiz-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      .quiz-info {
+        flex-grow: 1;
+
+        p {
+          margin: 0;
+        }
+
+        button {
+          margin-right: 10px;
+        }
+      }
+
+      .quiz-actions {
+        display: flex;
+        align-items: center;
+
+        .icon-edit,
+        .icon-delete {
+          margin-left: 10px;
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: #0056b3;
+          }
+        }
+
+        .icon-delete:hover {
+          color: #c82333;
+        }
+      }
+    }
+  }
+}

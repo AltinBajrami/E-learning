@@ -1,0 +1,54 @@
+.navbar-links__courses {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-links__courses-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    margin-left: -16px; 
+    font-size: 13px;
+    transition: transform 0.5s ease;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.navbar-links__courses-menu {
+  display: none;
+  position: absolute;
+  margin-left: -80px;
+  margin-top: 20px;
+  background-color: #fff ;
+  min-width: 180px;
+  height: 167px;
+  border: 2px solid #D3D3D3;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 1;
+ 
+
+  p {
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 12px 7px;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      background-color:#D3D3D3;
+      transition: ease 0.3s;
+      border-radius: 5px;
+    }
+  }
+}
+
+.navbar-links__courses-menu {
+  display: block;
+}

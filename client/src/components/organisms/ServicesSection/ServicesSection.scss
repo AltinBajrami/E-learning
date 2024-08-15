@@ -1,0 +1,63 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.services-section {
+  padding: 24px;
+  padding-top: 50px;
+  margin: 0 auto;
+  font-family: $font-family;
+  margin-left: 0px;
+
+  @include respond(mobile) {
+    padding: 2rem;
+    margin-left: 0;
+    align-items: flex-start;
+    text-align: left;
+
+    .services-header,
+    .services-description {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .card {
+      margin: 0 auto 1rem 0;
+    }
+  }
+
+  .services-header {
+    font-family: $font-family;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .services-description {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: rgba(81, 96, 111, 1);
+    margin: 0 0 2rem 2rem;
+    width: 90%;
+  }
+  @media (max-width: 1150px) {
+    padding: 0;
+  }
+  @media (max-width: 830px) {
+     width: 800px;
+     margin: 0;
+     padding: 0;
+     margin-top: 3rem;
+  }
+  @media (max-width: 500px) {
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+ }
+}

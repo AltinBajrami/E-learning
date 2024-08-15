@@ -1,0 +1,151 @@
+.singleClassPage {
+  padding: 20px;
+  width: 90%;
+  margin: 1rem auto;
+  .singleClassText {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+  .headerInfo {
+    display: grid;
+    h1 {
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      line-height: 1.8;
+    }
+  }
+
+  .formTopic {
+    margin: 1rem auto;
+    display: flex;
+    box-shadow: 0px 0px 0px;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    label {
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+  }
+  @media (min-width: 1300px) {
+    .singleClassText {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  .topic {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(211, 210, 210);
+    h2 {
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .editBtn {
+        font-size: 19px;
+      }
+      button {
+        font-size: 25px;
+        background-color: transparent;
+        border: transparent;
+        color: rgb(5, 185, 5);
+        transition: 2s all ease-in-out;
+        :hover {
+          color: rgb(10, 102, 10);
+        }
+      }
+      .deleteBtn {
+        color: rgb(217, 47, 47);
+        :hover {
+          color: rgb(139, 29, 29);
+        }
+      }
+    }
+  }
+  .quiz {
+    h2 {
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .quiz-info {
+      margin-bottom: 1rem;
+      p {
+        display: flex;
+        gap: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        span {
+          font-weight: normal;
+          max-width: fit-content;
+        }
+      }
+    }
+    .createBtn {
+      max-width: 100px;
+      margin: 0.5rem 0;
+    }
+  }
+  .meetLink {
+    margin-top: 0.75rem;
+    p {
+      text-transform: capitalize;
+      margin-right: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .meetLinkModal {
+    form {
+      margin-top: 0.5rem;
+      h4 {
+        letter-spacing: 2px;
+      }
+      input {
+        padding: 0.5rem;
+        border-radius: 8px;
+        margin-right: 0.5rem;
+      }
+      .btns {
+        display: flex;
+        margin: 0.5rem auto;
+        gap: 1rem;
+      }
+    }
+  }
+  .deleteBtn {
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: transparent;
+    transition: 2s all ease-in-out;
+    color: rgb(217, 47, 47);
+    :hover {
+      color: rgb(139, 29, 29);
+    }
+  }
+}

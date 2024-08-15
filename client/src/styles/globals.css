@@ -1,0 +1,8 @@
+body {
+  background-color: #fff;
+  font-family: var(--font-family);
+}
+
+div#root {
+  width: 100%;
+}

@@ -1,0 +1,98 @@
+$pagination-border-color: #C2C7CF;
+$pagination-border-radius: 4px;
+$pagination-bg-color: rgba(215, 229, 246, 0.362);
+$pagination-active-bg-color: #CEE5FF;
+$pagination-disabled-color: #ddd;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+
+    &-page,
+    &-previous,
+    &-next,
+    .break-me {
+        cursor: pointer;
+        padding: 0;
+        border: 1px solid $pagination-border-color;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: var(--font-weight-bold);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        background-color: #fff;
+        margin-left: -1px;
+
+        &:hover {
+            background-color: $pagination-bg-color;
+        }
+    }
+
+    &-next {
+        border-radius: 0 10px 10px 0;
+    }
+
+    &-previous {
+        border-radius: 10px 0 0 10px;
+    }
+
+    &-disabled {
+        cursor: not-allowed;
+        color: $pagination-disabled-color;
+        .arrow {
+            opacity: 0.3;
+        }
+    }
+
+    .active {
+        background-color: $pagination-active-bg-color;
+    }
+
+    .pagination-info {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        &-page,
+        .break-me {
+            display: none;
+        }
+
+        .pagination-info {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-weight: bold;
+            border: 1px solid $pagination-border-color;
+            margin-left: -1px;
+            .page-count {
+                font-weight: bold;
+                color: #adadad // Set the color to grey
+            }
+
+            .current-page {
+                font-weight: bold;
+                color: inherit; // Keep the current color
+            }
+        }
+
+        &-previous {
+            left: 10px;
+            .text {
+                display: none;
+            }
+        }
+
+        &-next {
+            right: 10px;
+            .text {
+                display: none;
+            }
+        }
+    }
+}

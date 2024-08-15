@@ -1,0 +1,159 @@
+.figma-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 2rem;
+
+    .image {
+        position: relative;
+        overflow: hidden; 
+        border-radius: 30px;
+
+        img {
+            width: 100%;
+            display: block; 
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+    }
+
+    .centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        width: 38%;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            font-family: var(--font-family);
+            font-size: 3rem;
+            font-weight: var(--font-weight-medium);
+            line-height: 64px;
+            color: var(--color-primary);
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-size: var(--font-size-small);
+            color: var(--color-primary);
+            line-height: 24px;
+            letter-spacing: 0.50px;
+            text-align: center;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border: 1px solid var(--color-primary);
+            border-radius: 40px;
+            padding: 10px 20px 10px 28px;
+            color: var(--color-primary);
+            cursor: pointer;
+            gap: 10px;
+            font-size: var(--font-size-base);
+            text-align: center;
+            font-weight: var(--font-weight-medium);
+            transition: background-color 0.5s ease-in-out, color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var(--color-primary);
+                color: var(--color-button);
+            }
+
+            .arrow {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        .centered {
+            top: 45%;
+            gap: 35px;
+            
+            h1{
+                font-size: var(--font-size-h1);
+                line-height: 50px;
+            }
+            
+            .button{
+            font-size: 13px;
+
+            .arrow {
+                font-size: 13px;
+            }
+            }
+        } 
+    }
+
+    @media screen and (max-width: 850px) {
+        .centered {   
+            gap: 30px;         
+            h1{
+                font-size: var(--font-size-h3);
+                line-height: 40px;
+            }
+            p{
+                font-size: 12px;
+                line-height: 15px;
+            }
+            
+            .button{
+            font-size: 11px;
+            padding: 8px 15px 8px 23px;;
+            .arrow {
+                font-size: 12px;
+            }
+            }
+        } 
+    }
+
+    @media screen and (max-width: 550px) {
+
+        .image {
+
+            img{
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+        .centered {
+            width: 80%;
+            top: 28%;
+            gap: 25px;
+            
+            h1{
+                font-size: var(--font-size-h2);
+            }
+            
+            p{
+                font-size: 13px;
+                letter-spacing: 0.3;
+                line-height: 20px;
+            }
+
+            .button{
+            font-size: 12px;
+
+            .arrow {
+                font-size: 13px;
+            }
+            }
+        }
+        
+    }
+}

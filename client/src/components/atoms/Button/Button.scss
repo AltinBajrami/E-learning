@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.custom-button {
+  width: 121px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--Schemes-Primary, rgba(47, 98, 140, 1));
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  bottom: 12px; 
+  left: 12px;
+  gap: 12px;
+
+
+
+
+
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+
+

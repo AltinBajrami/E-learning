@@ -1,0 +1,68 @@
+.toggle {
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 180px; 
+  height: 45px; 
+  font-weight: 500;
+}
+
+.toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__label {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bar);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.toggle__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-button);
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.toggle__option {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.toggle__option--card {
+  left: 0;
+}
+
+.toggle__option--table {
+  right: 0;
+  color: #000;
+}
+
+.toggle__input:checked + .toggle__label .toggle__slider {
+  transform: translateX(100%);
+}
+
+.toggle__input:checked + .toggle__label .toggle__option--card {
+  color: #000; /* Change text color to black when card view is selected */
+}
+
+.toggle__input:checked + .toggle__label .toggle__option--table {
+  color: #fff; /* Change text color to black when table view is selected */
+}

@@ -1,0 +1,21 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: 360px) and (max-width: 767px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  } @else if $breakpoint == laptop {
+    @media (min-width: 992px) and (max-width: 1399px) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1400px) { @content; }
+  } @else if $breakpoint == mobile-s {
+    @media (min-width: 320px) and (max-width: 767px) { @content; }
+  } @else if $breakpoint == mobile-m {
+    @media (min-width: 375px) and (max-width: 424px) { @content; }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

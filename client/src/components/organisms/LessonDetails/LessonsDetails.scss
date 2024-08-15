@@ -1,0 +1,59 @@
+.lesson-search-results {
+  padding: 20px;
+  margin: 0 auto;
+  width: 500px;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--color-button);
+    text-align: center;
+  }
+
+  .lesson-search-results-result {
+    padding: 0;
+    list-style-type: none;
+
+    .lesson {
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      background-color: var(--color-button);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f1f1f1;
+        transform: translateY(-3px);
+        h2, p {
+          color: var(--color-button);
+        }
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+        color:#fff;
+        line-height: 1.5;
+        text-align: center;
+
+      }
+    }
+  }
+
+  p.no-results {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+  }
+  @media (max-width: 431px) {
+      width: 300px;
+  }
+}
